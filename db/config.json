@@ -6,6 +6,6 @@
     "url": "mongodb://localhost/shopping-list-test"
   },
   "development": {
-    "url": "mongodb://192.168.0.15/shopping-list-dev"
+    "url": "mongodb://localhost/shopping-list-dev"
   }
 }
