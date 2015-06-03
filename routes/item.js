@@ -14,6 +14,7 @@ router.get('/items', function(req, res) {
 });
 
 router.post('/items', function(req, res) {
+  console.log("Posting an item");
   Item.save(req.body.name, function(item) {
     res.status(201).json(item);
   }, function(err) {
