@@ -6,6 +6,7 @@ var Item = require('../services/item');
 var router = express.Router();
 
 router.get('/items', function(req, res) {
+  console.log("Getting items");
   Item.list(function(items) {
     res.json(items);
   }, function(err) {
