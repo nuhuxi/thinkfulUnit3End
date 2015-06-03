@@ -21,4 +21,12 @@ router.post('/items', function(req, res) {
   });
 });
 
+router.delete('/items', function(req, res) {
+  console.log("deleting an item");
+});
+
+router.put('/items', function(req, res) {
+  console.log("editing an item");
+});
+
 module.exports = router;
