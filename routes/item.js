@@ -24,6 +24,7 @@ router.post('/items', function(req, res) {
 });
 
 router.delete('/items', function(req, res) {
+  Item.delete
   console.log("deleting an item");
 });
 
