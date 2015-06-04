@@ -112,7 +112,7 @@
     };
 
     ShoppingList.prototype.onEditItemClicked = function(event) {
-      console.log("Edit item has been clicked");
+      alert("Edit item has been clicked");
       var item = $(event.target).parents('li');
       var display = item.children('.display');
       var input = item.children('input');
