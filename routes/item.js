@@ -23,7 +23,7 @@ router.post('/items', function(req, res) {
   });
 });
 
-router.delete('/items', function(req, res) {
+router.delete('/items/:id', function(req, res) {
   console.log("deleting an item");
 });
 
