@@ -24,8 +24,9 @@ router.post('/items', function(req, res) {
 });
 
 router.delete('/items/:id', function(req, res) {
-  console.log("Deleting item: " + req.params.id);
-  Item.delete(req.params.id, function(){
+  var deleteThisID = req.params.id;
+  console.log("Deleting item: " + deleteThisID);
+  Item.delete(deleteThisID, function(){
 
   });
 });
