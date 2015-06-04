@@ -23,12 +23,6 @@ router.post('/items', function(req, res) {
   });
 });
 
-router.delete('/items', function(req, res) {
-  Item.delete(function(item) {
-    console.log("deleting an item");})
-
-});
-
 router.put('/items', function(req, res) {
   console.log("editing an item");
 });
