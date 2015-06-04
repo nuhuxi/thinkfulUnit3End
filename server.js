@@ -6,6 +6,8 @@ require('./db/connect');
 var express = require('express');
 var bodyParser = require('body-parser');
 var itemRoutes = require('./routes/item');
+
+var jsonParser = bodyParser.json();
 var app = express();
 
 app.use(bodyParser.json());
@@ -15,7 +17,7 @@ app.delete('/items/:item', jsonParser, function(req, res) {
 
   console.log("The id is: " + req.body.id);
   console.log("The id is: " + req.body.name);
-  
+
 });
 
 app.use('/', itemRoutes);
