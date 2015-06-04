@@ -15,8 +15,8 @@ app.use(express.static('public'));
 
 app.delete('/items/:item', jsonParser, function(req, res) {
 
-  console.log("The id is: " + req.body.id);
-  console.log("The id is: " + req.body.name);
+  console.log("The id is: " + req.body[0]);
+  console.log("The id is: " + req.body[1]);
 
 });
 
