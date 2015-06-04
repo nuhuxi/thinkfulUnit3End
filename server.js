@@ -11,6 +11,13 @@ var app = express();
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+app.delete('/items/:item', jsonParser, function(req, res) {
+
+  console.log("The id is: " + req.body.id);
+  console.log("The id is: " + req.body.name);
+  
+});
+
 app.use('/', itemRoutes);
 app.use('*', function(req, res) {
   res.status(404).json({ message: 'Not Found' });
