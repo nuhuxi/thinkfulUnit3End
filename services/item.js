@@ -26,17 +26,17 @@ exports.list = function(callback, errback) {
 
 exports.delete = function(id, callback, errback) {
   console.log("Deleting item: " + id);
-  Item.findOneAndRemove(id, function(err, id) {
+  Item.findOneAndRemove(id, function (err, id) {
     console.log("made it into exports delete");
-    Item.find(function(err, items) {
+    Item.find(function (err, items) {
       if (err) {
         errback(err);
         return;
       }
       callback(items);
-
+    });
   });
-});
+};
 
 exports.put = function(name, callback, errback) {
   console.log("Made it into item put");
