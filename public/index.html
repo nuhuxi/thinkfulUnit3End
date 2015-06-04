@@ -101,7 +101,6 @@
       if (event.which != 13) {
         return;
       }
-      alert("You pushed the enter key");
       var input = $(event.target);
       var value = input.val().trim();
       if (value != '') {
@@ -112,7 +111,6 @@
     };
 
     ShoppingList.prototype.onEditItemClicked = function(event) {
-      alert("Edit item has been clicked");
       var item = $(event.target).parents('li');
       var display = item.children('.display');
       var input = item.children('input');
@@ -127,8 +125,6 @@
     ShoppingList.prototype.onEditInputKeydown = function(event) {
       if (event.which != 13) {
         return;
-      }
-      alert("Edit item has been clicked");
       var input = $(event.target);
       input.blur();
     };
