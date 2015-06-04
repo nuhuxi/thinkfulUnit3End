@@ -36,7 +36,7 @@ exports.delete = function(id, callback, errback) {
       callback(items);
 
   });
-};
+});
 
 exports.put = function(name, callback, errback) {
   console.log("Made it into item put");
