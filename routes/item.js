@@ -26,9 +26,7 @@ router.post('/items', function(req, res) {
 router.delete('/items/:id', function(req, res) {
   var deleteThisID = req.params.id;
   console.log("Deleting item: " + deleteThisID);
-  Item.delete(deleteThisID, function(){
-
-  });
+  Item.delete(deleteThisID);
 });
 
 module.exports = router;
