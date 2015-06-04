@@ -28,7 +28,7 @@ exports.delete = function(name, callback, errback) {
   Item.find(function(err, items) {
     console.log("made it into exports delete");
 
-};
+}};
 
 exports.put = function(name, callback, errback) {
   console.log("Made it into item put");
