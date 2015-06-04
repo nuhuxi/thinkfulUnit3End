@@ -177,13 +177,9 @@
 
     ShoppingList.prototype.deleteItem = function(id) {
       console.log("You are about to send this item for deletion: " + id);
-      var item = {'id': id};
       var ajax = $.ajax('/items/' + id, {
         type: 'DELETE',
         dataType: 'json'
-        //take these out
-        data: JSON.stringify(item),
-
       });
       ajax.done(this.getItems.bind(this));
     };
