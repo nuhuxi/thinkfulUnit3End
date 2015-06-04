@@ -23,8 +23,8 @@ router.post('/items', function(req, res) {
   });
 });
 
-router.put('/items', function(req, res) {
-  console.log("editing an item");
+router.delete('/items', function(req, res) {
+  console.log("deleting an item");
 });
 
 module.exports = router;
