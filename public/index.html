@@ -125,6 +125,7 @@
     ShoppingList.prototype.onEditInputKeydown = function(event) {
       if (event.which != 13) {
         return;
+      }
       var input = $(event.target);
       input.blur();
     };
