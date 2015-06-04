@@ -25,7 +25,7 @@ exports.list = function(callback, errback) {
 };
 
 exports.delete = function(name, callback, errback) {
-  Item.find(function(err, items) {
+  Item.findOneAndRemove(function(err, items) {
     console.log("made it into exports delete");
 
   });
