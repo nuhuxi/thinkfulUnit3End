@@ -24,8 +24,8 @@ exports.list = function(callback, errback) {
   });
 };
 
-exports.delete = function(name, callback, errback) {
-  Item.findOneAndRemove(function(err, items) {
+exports.delete = function(id, callback, errback) {
+  Item.findOneAndRemove(function(err, id) {
     console.log("made it into exports delete");
 
   });
