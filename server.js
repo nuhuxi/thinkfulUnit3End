@@ -8,15 +8,6 @@ var bodyParser = require('body-parser');
 var itemRoutes = require('./routes/item');
 var app = express();
 
-/*
-app.delete('/items/:item', jsonParser, function(req, res) {
-
-  console.log("A delete request came in!");
-  console.log("Here is the header: " + req.header);
-
-});
-
-*/
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
