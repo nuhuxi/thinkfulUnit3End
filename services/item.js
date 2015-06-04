@@ -28,10 +28,12 @@ exports.delete = function(id, callback, errback) {
   console.log("Deleting item: " + id);
   Item.findOneAndRemove(id, function(err, id) {
     console.log("made it into exports delete");
-    if (err) {
-      errback(err);
-      return;
-    };
+    Item.find(function(err, items) {
+      if (err) {
+        errback(err);
+        return;
+      }
+      callback(items);
 
   });
 };
