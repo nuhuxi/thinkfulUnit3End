@@ -23,7 +23,7 @@ describe('Shopping List', function() {
   });
 
   it('should list items on GET', function (done) {
-    chai.request('http://localhost:8080)
+    chai.request('http://localhost:8080')
       .get('/items')
       .end(function (err, res) {
         res.should.have.status(200);
