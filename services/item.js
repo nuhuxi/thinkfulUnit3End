@@ -38,13 +38,14 @@ exports.delete = function(id, callback, errback) {
 
 exports.put = function(body, callback, errback) {
   console.log("Made it into item put");
-  Item.findOneAndUpdate({_id : body.id}, {name: body.name}, function(err, item) {
-    console.log("made it into findOneAndUpdate delete");
+  Item.findOneAndUpdate({_id : body.id}, {name: body.name}, function(err, body) {
+    console.log("made it into findOneAndUpdate");
     if (err) {
+      console.log("findOneAndUpdate threw an error");
       errback(err);
       return;
     }
-    callback(item);
+    callback(body);
   });
 
 };
