@@ -15,6 +15,7 @@ var app = server.app;
 chai.use(chaiHttp);
 
 describe('Shopping List', function() {
+
   before(function(done) {
     seed.run(function() {
       done();
@@ -22,7 +23,7 @@ describe('Shopping List', function() {
   });
 
   it('should list items on GET', function (done) {
-    chai.request('http://localhost:3000')
+    chai.request('http://localhost:8080)
       .get('/items')
       .end(function (err, res) {
         res.should.have.status(200);
@@ -42,7 +43,7 @@ describe('Shopping List', function() {
   });
 
   it('should add an item on POST', function () {
-    chai.request('http://localhost:3000')
+    chai.request('http://localhost:8080')
       .post('/items')
       .end(function (err, res) {
         res.should.have.status(201);
@@ -60,7 +61,7 @@ describe('Shopping List', function() {
   });
 
   it('should edit an item on put', function () {
-    chai.request('http://localhost:3000')
+    chai.request('http://localhost:8080')
       .put('/items')
       .end(function (err, res) {
         res.should.have.status(201);
@@ -77,7 +78,7 @@ describe('Shopping List', function() {
   });
 
   it('should delete an item on delete', function () {
-    chai.request('http://localhost:3000')
+    chai.request('http://localhost:8080')
       .delete('/items')
       .end(function (err, res) {
         res.should.have.status(201);
@@ -98,4 +99,5 @@ describe('Shopping List', function() {
       done();
     });
   });
+
 });
