@@ -31,4 +31,16 @@ router.delete('/items/:id', function(req, res) {
   });
 });
 
+router.put('/items/:id', function(req, res) {
+  console.log("Made it to the put route.");
+  console.log("Update this id: " + req.body.id);
+  console.log("Here is the new name: " + req.body.name);
+  /*
+  Item.edit(req.params.id, function(err, id) {
+    res.status(201).json(id);
+  }, function(err) {
+    res.status(201).json(err);
+  });*/
+});
+
 module.exports = router;
