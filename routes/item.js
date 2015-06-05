@@ -35,9 +35,9 @@ router.put('/items/:id', function(req, res) {
   console.log("Made it to the put route.");
   console.log("Update this id: " + req.body.id);
   console.log("Here is the new name: " + req.body.name);
-  /*
-  Item.edit(req.params.id, function(err, id) {
-    res.status(201).json(id);
+
+  Item.put(req.body, function(err, newItem) {
+    res.status(201).json(newitem);
   }, function(err) {
     res.status(201).json(err);
   });*/
