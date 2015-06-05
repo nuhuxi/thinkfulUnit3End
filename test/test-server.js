@@ -31,7 +31,7 @@ describe('Shopping List', function() {
         res.body.should.be.a('array');
         res.body.should.have.length(3);
         res.body[0].should.be.a('object');
-        res.body[0].should.have.property('id');
+        res.body[0].should.have.property('_id');
         res.body[0].should.have.property('name');
         res.body[0].id.should.be.a('number');
         res.body[0].name.should.be.a('string');
