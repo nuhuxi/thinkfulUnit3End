@@ -40,7 +40,7 @@ router.put('/items/:id', function(req, res) {
     res.status(201).json(newitem);
   }, function(err) {
     res.status(201).json(err);
-  });*/
+  });
 });
 
 module.exports = router;
