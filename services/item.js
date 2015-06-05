@@ -36,15 +36,15 @@ exports.delete = function(id, callback, errback) {
   });
 };
 
-exports.put = function(name, callback, errback) {
+exports.put = function(body, callback, errback) {
   console.log("Made it into item put");
-  Item.findOneAndUpdate(function(err, items) {
+  Item.findOneAndUpdate({_id : body.id}, {name: body.name}, function(err, item) {
     console.log("made it into findOneAndUpdate delete");
     if (err) {
       errback(err);
       return;
     }
-    callback(id);
+    callback(item);
   });
 
 };
