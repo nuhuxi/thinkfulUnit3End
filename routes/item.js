@@ -24,8 +24,11 @@ router.post('/items', function(req, res) {
 });
 
 router.delete('/items/:id', function(req, res) {
-  var deleteThisID = req.params.id;
-  Item.delete(req.params.id);
+  Item.delete(req.params.id, function(id) {
+    res.status(201).json(id);
+  }, function(err) {
+    res.status(201).json(err);
+  });
 });
 
 module.exports = router;
